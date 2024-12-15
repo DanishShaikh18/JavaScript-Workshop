@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Elements</title>
+</head>
+<body>
+    <h1 id="title">Hello, World</h1>
+    <p class="description">This is a paragraph.</p>
+
+    <script>
+        // Using getElementById to select the element by its ID
+        const title = document.getElementById("title");
+        console.log(title.textContent); // Output: Hello, World!
+
+        // Using querySelector to select the first element matching the CSS selector
+        const paragraph = document.querySelector(".description");
+        console.log(paragraph.textContent); // Output: This is a paragraph.
+    </script>
+</body>
+
+</html>

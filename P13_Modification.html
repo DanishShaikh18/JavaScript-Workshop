@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Content and Attributes</title>
+</head>
+<body>
+    <h1 id="title">Old Title</h1>
+    <img id="image" src="placeholder.jpg" alt="Old Image" width="200">
+    <button id="changeButton">Change Content and Attributes</button>
+
+    <script>
+        // Selecting Elements
+        const title = document.getElementById("title");
+        const image = document.getElementById("image");
+        const button = document.getElementById("changeButton");
+
+        // Adding/Modifying Content and Attributes on Button Click
+        button.addEventListener("click", () => {
+            // Modifying Content
+            title.textContent = "New Title";
+
+            // Modifying Attributes
+            image.src = "https://via.placeholder.com/200";
+            image.alt = "New Image";
+
+            // Adding a new attribute
+            image.style.border = "2px solid red";
+        });
+    </script>
+</body>
+</html>

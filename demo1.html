@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb On/Off</title>
+    <style>
+        body {
+		padding: 50px;
+		background: #ffffff;
+}
+h1 {
+		 color: #808080d6;
+		 letter-spacing: 0.2em;
+}
+#bulbImg {
+		width: 200px;
+		margin: 40px;
+}
+.container {
+    text-align: center;
+}
+.container {
+		box-shadow: 5px 5px 25px 0px rgb(221, 221, 221);
+		padding: 20px;
+		background: #ffffff4d;
+		border-radius: 0.375rem;
+}
+#bulb-button {
+    display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  padding: 15px;
+    box-shadow: 4px 4px 4px 0 rgba(46, 61, 73, 0.13);
+		border-radius: 0.25rem;
+		letter-spacing: 0.09375rem;
+		background: #fff;
+}
+    </style>
+
+</head>
+
+<body>
+    <body>
+        <div class="container">
+            <img id="bulbImg" src="https://image.ibb.co/hoBxtm/light_bulb_off.png" alt="Blub">
+            <button id="bulb-button" type="button" onclick="changeBulbImage()">Bulb ON/OFF</button>	
+        </div>
+        
+    </body>
+    
+    <script>
+        var state = 0;
+		function changeBulbImage() {
+			if (state == 1) {
+				document.getElementById("bulbImg").src="https://image.ibb.co/hoBxtm/light_bulb_off.png";
+				state = 0;
+			} else {
+				document.getElementById("bulbImg").src="https://image.ibb.co/cBBaeR/light_bulb_on.png";
+				state = 1;
+			}
+		}
+    </script>
+</body>
+
+</html>

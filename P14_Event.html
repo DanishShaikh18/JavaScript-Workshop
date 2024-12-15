@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #hoverBox {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 150px;
+            font-size: 16px;
+            font-weight: bold;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        #hoverBox:hover {
+            transform: scale(1.1);
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            outline: none;
+            width: 200px;
+        }
+
+        input:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 8px rgba(0, 91, 179, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <button id="clickButton">Click Me</button>
+    <div id="hoverBox">Hover Over Me</div>
+    <input type="text" id="textInput" placeholder="Type something">
+
+    <script>
+        // Click Event
+        const button = document.getElementById("clickButton");
+        button.addEventListener("click", () => {
+            alert("Button clicked!");
+        });
+
+        // Hover Event
+        const box = document.getElementById("hoverBox");
+        box.addEventListener("mouseenter", () => {
+            box.style.backgroundColor = "lightgreen";
+            box.textContent = "Hovering!";
+        });
+        box.addEventListener("mouseleave", () => {
+            box.style.backgroundColor = "lightblue";
+            box.textContent = "Hover Over Me";
+        });
+
+        // Input Event
+        const input = document.getElementById("textInput");
+        input.addEventListener("input", (event) => {
+            console.log(`Input: ${event.target.value}`);
+        });
+    </script>
+</body>
+</html>
